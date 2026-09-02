@@ -1,12 +1,6 @@
 # Práctica 1 — Instalación y Funcionamiento de los Entornos Móviles
 
-## Ejercicio 1 — Instalación de Herramientas
-
-### Introducción
-
-En este ejercicio se realizó la instalación y configuración de las herramientas necesarias para establecer un entorno de desarrollo para aplicaciones móviles. El propósito fue preparar el sistema para desarrollar, compilar y ejecutar aplicaciones Android utilizando diferentes tecnologías y enfoques de construcción de interfaces.
-
-Las herramientas utilizadas fueron **Android Studio, Git, GitHub, Node.js, Docker, Java Development Kit (JDK) y Flutter**. Después de realizar su instalación y configuración, se verificó el funcionamiento de cada una mediante los comandos correspondientes.
+## Instalación de Herramientas
 
 ---
 
