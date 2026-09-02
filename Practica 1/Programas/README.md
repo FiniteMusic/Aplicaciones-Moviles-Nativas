@@ -18,7 +18,8 @@ La instalación fue verificada ejecutando correctamente el entorno de desarrollo
 
 ### Evidencia
 
-> Captura de pantalla de Android Studio con el entorno de desarrollo y el emulador funcionando correctamente.
+> <img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/8058938a-31f8-4fba-af72-03e85150f4bf" />
+
 
 ---
 
