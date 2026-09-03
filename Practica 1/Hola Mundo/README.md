@@ -1,6 +1,6 @@
-# Práctica 1 — Ejercicio 2
+# Práctica 1 — Instalación y Funcionamiento de los Entornos Móviles
 
-## Aplicación "Hola Mundo" en tres enfoques
+# Aplicación "Hola Mundo" en tres enfoques
 
 # 1. Hola Mundo — Android Views/XML
 
