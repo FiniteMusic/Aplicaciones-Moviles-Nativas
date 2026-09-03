@@ -49,7 +49,10 @@ git --version
 
 ### Evidencia
 
-> Captura de pantalla de la terminal mostrando la versión de Git instalada y/o del repositorio de GitHub configurado.
+> <img width="728" height="335" alt="image" src="https://github.com/user-attachments/assets/bc34a1e7-1091-4482-88d6-f0fe8772e5a4" />
+<img width="1195" height="878" alt="image" src="https://github.com/user-attachments/assets/e10e1a34-c979-4e7f-a4fd-d58f3dacf325" />
+
+
 
 ---
 
@@ -73,7 +76,8 @@ El comando muestra la versión de Node.js instalada en el sistema.
 
 ### Evidencia
 
-> Captura de pantalla de la terminal mostrando la versión de Node.js.
+> <img width="785" height="322" alt="image" src="https://github.com/user-attachments/assets/ac6a0d3f-8fc3-4bc8-a781-0e588773943f" />
+
 
 ---
 
@@ -103,7 +107,8 @@ El contenedor de prueba permitió verificar que Docker se encontraba correctamen
 
 ### Evidencia
 
-> Captura de pantalla de la terminal mostrando la versión de Docker y el resultado de la ejecución del contenedor `hello-world`.
+> <img width="961" height="667" alt="image" src="https://github.com/user-attachments/assets/bddaf56c-1904-4cb0-9591-1590bd2113d8" />
+
 
 ---
 
@@ -127,7 +132,8 @@ El comando permitió confirmar la versión del JDK instalada y comprobar que se 
 
 ### Evidencia
 
-> Captura de pantalla de la terminal mostrando la versión del JDK instalada.
+> <img width="1130" height="432" alt="image" src="https://github.com/user-attachments/assets/f80d79a2-2dc4-4375-a675-778039559c18" />
+
 
 ---
 
@@ -151,6 +157,7 @@ Este comando permitió comprobar el estado de la instalación de Flutter, así c
 
 ### Evidencia
 
-> Captura de pantalla de la terminal mostrando el resultado de `flutter doctor`.
+> <img width="1305" height="390" alt="image" src="https://github.com/user-attachments/assets/36b43380-198d-47d2-bbba-faeed63f44af" />
+
 
 ---
