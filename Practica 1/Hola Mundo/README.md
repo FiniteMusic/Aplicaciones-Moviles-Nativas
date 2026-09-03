@@ -1,6 +1,5 @@
 # Práctica 1 — Instalación y Funcionamiento de los Entornos Móviles
 
----
 **Instituto Politécnico Nacional**  
 **Escuela Superior de Cómputo (ESCOM)**  
 **Unidad de Aprendizaje:** Desarrollo de Aplicaciones Móviles Nativas  
@@ -10,7 +9,7 @@
 * **Nombre:** Marco Uriel De la Cruz Velázquez
 * **Grupo:** 7CV4
 
----
+
 
 ## 1. Hola Mundo — Android Views/XML
 
