@@ -165,4 +165,3 @@ Este comando permitió comprobar el estado de la instalación de Flutter, así c
 ## Conclusión
 La instalación y configuración de las herramientas permitió establecer un entorno de desarrollo funcional para la realización de la práctica. Android Studio proporciona las herramientas principales para el desarrollo de aplicaciones Android, mientras que Git y GitHub permiten administrar y almacenar el código fuente de los proyectos.
 Por otra parte, Node.js y Docker complementan el entorno de desarrollo al proporcionar herramientas para la ejecución de aplicaciones y servicios. Finalmente, el JDK y Flutter permiten cubrir los requerimientos necesarios para trabajar con las diferentes tecnologías que serán utilizadas durante la práctica.
-Con el entorno correctamente configurado, es posible continuar con el desarrollo de las tres versiones de la aplicación "Hola Mundo", utilizando Views/XML, Jetpack Compose y Flutter.
