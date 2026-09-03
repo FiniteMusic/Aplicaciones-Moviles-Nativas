@@ -1,8 +1,13 @@
 # Práctica 1 — Instalación y Funcionamiento de los Entornos Móviles
 
-## Instalación de Herramientas
+## Información del alumno
 
----
+- **Nombre:** Marco Uriel De la Cruz Velázquez
+- **Grupo:** 7CV4
+- **Unidad de aprendizaje:** Desarrollo de Aplicaciones Móviles Nativas
+- **Institución:** Instituto Politécnico Nacional — Escuela Superior de Cómputo
+
+## Sección 1 - Instalación de Herramientas
 
 ## 1. Android Studio
 
