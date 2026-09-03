@@ -40,7 +40,8 @@ Para ejecutar esta versión:
 
 ### Evidencia
 
-> Captura de pantalla de la aplicación "Hola Mundo" desarrollada con Jetpack Compose ejecutándose en el emulador.
+> <img width="1917" height="978" alt="image" src="https://github.com/user-attachments/assets/f1ba34fe-2d1c-46b6-9f48-7a51064dfaa1" />
+
 
 ---
 
