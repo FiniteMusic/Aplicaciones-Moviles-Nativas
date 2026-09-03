@@ -1,6 +1,14 @@
 # Práctica 1 — Instalación y Funcionamiento de los Entornos Móviles
 
-## Parte 2 - Hola Mundo
+## Parte 2 — Hola Mundo
+
+En esta parte de la práctica se desarrollaron tres versiones de una aplicación básica de tipo **"Hola Mundo"**, utilizando diferentes enfoques para la construcción de interfaces móviles:
+
+1. Android nativo con Views/XML.
+2. Android nativo con Jetpack Compose.
+3. Flutter.
+
+---
 
 ## 1. Hola Mundo — Android Views/XML
 
@@ -17,7 +25,7 @@ La interfaz se construyó mediante un archivo de layout XML, utilizando componen
 La interfaz se encuentra definida en el archivo de layout XML, mientras que la lógica principal de la actividad se encuentra implementada en Kotlin.
 
 Una estructura simplificada del proyecto es:
-
+```text
 hola_mundo_xml/
 ├── app/
 │   └── src/
@@ -27,6 +35,7 @@ hola_mundo_xml/
 │           │   └── layout/
 │           └── AndroidManifest.xml
 └── build.gradle
+```
 
 ## Ejecución
 
@@ -68,7 +77,7 @@ Para organizar la información se utilizó un "Column" junto con componentes "Te
 - Uso de "@Preview" para visualizar la interfaz directamente desde Android Studio.
 
 ## Estructura general
-
+```text
 hola_mundo_compose/
 ├── app/
 │   └── src/
@@ -77,6 +86,7 @@ hola_mundo_compose/
 │           ├── res/
 │           └── AndroidManifest.xml
 └── build.gradle
+```
 
 ### Ejecución
 
@@ -119,6 +129,7 @@ Para construir la aplicación se utilizaron componentes de Flutter como "Materia
 
 ## Estructura general
 
+```text
 hola_mundo_flutter/
 ├── android/
 ├── ios/
@@ -127,7 +138,7 @@ hola_mundo_flutter/
 ├── test/
 ├── pubspec.yaml
 └── README.md
-
+```
 
 ### Ejecución
 
