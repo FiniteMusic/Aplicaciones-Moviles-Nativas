@@ -12,7 +12,7 @@ Para ejecutar esta versión:
 2. Esperar a que Gradle termine de sincronizar las dependencias.
 3. Iniciar un emulador Android o conectar un dispositivo físico.
 4. Seleccionar el dispositivo desde Android Studio.
-5. Ejecutar el proyecto mediante **Run ▶**.
+5. Ejecutar el proyecto mediante **Run**.
 
 La aplicación mostrará la información solicitada directamente en la interfaz.
 
