@@ -7,7 +7,7 @@
 - **Unidad de aprendizaje:** Desarrollo de Aplicaciones Móviles Nativas
 - **Institución:** Instituto Politécnico Nacional — Escuela Superior de Cómputo
 
-## Seccion 2
+## Sección 2 - Hola Mundo
 
 En esta parte de la práctica se desarrollaron tres versiones de una aplicación básica de tipo **"Hola Mundo"**, utilizando diferentes enfoques para la construcción de interfaces móviles:
 
