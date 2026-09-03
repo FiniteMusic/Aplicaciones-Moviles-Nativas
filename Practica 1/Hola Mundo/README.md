@@ -1,6 +1,13 @@
 # Práctica 1 — Instalación y Funcionamiento de los Entornos Móviles
 
-## Parte 2 — Hola Mundo
+## Información del alumno
+
+- **Nombre:** Marco Uriel De la Cruz Velázquez
+- **Grupo:** 7CV4
+- **Unidad de aprendizaje:** Desarrollo de Aplicaciones Móviles Nativas
+- **Institución:** Instituto Politécnico Nacional — Escuela Superior de Cómputo
+
+## Seccion 2
 
 En esta parte de la práctica se desarrollaron tres versiones de una aplicación básica de tipo **"Hola Mundo"**, utilizando diferentes enfoques para la construcción de interfaces móviles:
 
