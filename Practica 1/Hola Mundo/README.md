@@ -1,9 +1,8 @@
 # Práctica 1 — Instalación y Funcionamiento de los Entornos Móviles
 
-# Aplicación "Hola Mundo" en tres enfoques
+## Aplicación "Hola Mundo" en tres enfoques
 
-# 1. Hola Mundo — Android Views/XML
-
+## 1. Hola Mundo — Android Views/XML
 
 ### Ejecución
 
@@ -24,38 +23,8 @@ La aplicación mostrará la información solicitada directamente en la interfaz.
 
 ---
 
-# 2. Hola Mundo — Jetpack Compose
+## 2. Hola Mundo — Jetpack Compose
 
-### Descripción
-
-La segunda versión fue desarrollada utilizando **Jetpack Compose**, el enfoque declarativo de Android para construir interfaces de usuario.
-
-El proyecto fue creado en Android Studio utilizando la plantilla **Empty Activity (Jetpack Compose)**.
-
-A diferencia de la versión anterior, la interfaz no se define mediante un archivo XML separado. Los elementos visuales se describen directamente mediante funciones `@Composable`.
-
-Para organizar la información se utilizó un `Column` junto con componentes `Text` y modificadores de estilo.
-
-### Características principales
-
-* Uso de funciones `@Composable`.
-* Componentes `Text` para mostrar la información.
-* Organización de elementos mediante `Column`.
-* Uso de modificadores para aplicar estilos y espaciado.
-* Uso de `@Preview` para visualizar la interfaz directamente desde Android Studio.
-
-### Estructura general
-
-```text
-hola_mundo_compose/
-├── app/
-│   └── src/
-│       └── main/
-│           ├── java/
-│           ├── res/
-│           └── AndroidManifest.xml
-└── build.gradle
-```
 
 ### Ejecución
 
@@ -75,38 +44,8 @@ También es posible utilizar la anotación `@Preview` para visualizar el diseño
 
 ---
 
-# 3. Hola Mundo — Flutter
+## 3. Hola Mundo — Flutter
 
-### Descripción
-
-La tercera versión fue desarrollada utilizando **Flutter**, un SDK que permite construir aplicaciones multiplataforma mediante una misma base de código.
-
-El proyecto fue generado mediante el comando:
-
-```bash
-flutter create hola_mundo_flutter
-```
-
-La interfaz se implementó en el archivo:
-
-```text
-lib/main.dart
-```
-
-Para construir la aplicación se utilizaron componentes de Flutter como `MaterialApp`, `Scaffold`, `Column` y `Text`.
-
-### Estructura general
-
-```text
-hola_mundo_flutter/
-├── android/
-├── ios/
-├── lib/
-│   └── main.dart
-├── test/
-├── pubspec.yaml
-└── README.md
-```
 
 ### Ejecución
 
