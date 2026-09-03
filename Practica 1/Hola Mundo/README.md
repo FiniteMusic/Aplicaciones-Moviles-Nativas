@@ -8,7 +8,7 @@
 
 Para ejecutar esta versión:
 
-1. Abrir el proyecto `hola_mundo_xml` en Android Studio.
+1. Abrir el proyecto `MyXMLapp` en Android Studio.
 2. Esperar a que Gradle termine de sincronizar las dependencias.
 3. Iniciar un emulador Android o conectar un dispositivo físico.
 4. Seleccionar el dispositivo desde Android Studio.
@@ -30,13 +30,13 @@ La aplicación mostrará la información solicitada directamente en la interfaz.
 
 Para ejecutar esta versión:
 
-1. Abrir el proyecto `hola_mundo_compose` en Android Studio.
+1. Abrir el proyecto `MyComposeapp` en Android Studio.
 2. Esperar a que finalice la sincronización del proyecto.
 3. Iniciar un emulador Android o conectar un dispositivo físico.
 4. Seleccionar el dispositivo.
-5. Ejecutar el proyecto mediante **Run ▶**.
+5. Ejecutar el proyecto mediante **Run**.
 
-También es posible utilizar la anotación `@Preview` para visualizar el diseño directamente dentro del IDE.
+
 
 ### Evidencia
 
