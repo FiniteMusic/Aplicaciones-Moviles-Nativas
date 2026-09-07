@@ -1,7 +1,15 @@
 node_modules
 npm-debug.log
+
 .env
+
 .git
 .gitignore
+
 Dockerfile
-.dockerignoredocker compose build
+.dockerignore
+
+prisma/dev.db
+
+uploads/avatars/*
+!uploads/avatars/default.png

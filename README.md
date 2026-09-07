@@ -1,93 +1,237 @@
-# Aplicaciones Móviles Nativas
+# DoList
 
-**Instituto Politécnico Nacional**  
-**Escuela Superior de Cómputo (ESCOM)**
+Sistema de gestión de tareas desarrollado para la asignatura de **Aplicaciones Móviles Nativas**.
 
-**Unidad de Aprendizaje:** Desarrollo de Aplicaciones Móviles Nativas  
-**Programa Académico:** Ingeniería en Sistemas Computacionales  
-**Plan de Estudios:** 2020  
-**Periodo Escolar:** 2027-1  
-**Grupo:** 7CV4
+El proyecto cuenta con un backend REST que permite registrar usuarios, iniciar sesión, administrar el perfil y gestionar tareas mediante operaciones CRUD. La autenticación se realiza mediante JWT y la información se almacena utilizando Prisma ORM con SQLite.
+
+La versión 1.2 incorpora cambio de contraseña, avatar predeterminado y actualización de foto de perfil, además de manejo de errores y ejecución mediante Docker.
 
 ---
 
-## Información del alumno
+## Tecnologías
 
-- **Nombre:** Marco Uriel De la Cruz Velázquez
-- **Grupo:** 7CV4
-- **Unidad de aprendizaje:** Desarrollo de Aplicaciones Móviles Nativas
-- **Institución:** Instituto Politécnico Nacional — Escuela Superior de Cómputo
-
----
-
-## Descripción
-
-Este repositorio contiene las prácticas, ejercicios, proyectos y evidencias desarrollados durante la unidad de aprendizaje **Desarrollo de Aplicaciones Móviles Nativas**, correspondiente al séptimo semestre de la carrera de Ingeniería en Sistemas Computacionales.
-
-El repositorio tiene como finalidad organizar y documentar de manera progresiva el trabajo realizado durante el curso, incluyendo el código fuente, documentación, evidencias de ejecución, resultados y conclusiones de las actividades desarrolladas.
-
-La unidad de aprendizaje aborda el desarrollo de aplicaciones móviles utilizando los componentes de la plataforma Android, así como diferentes tecnologías relacionadas con interfaces de usuario, almacenamiento de datos, servicios, APIs, sensores y publicación de aplicaciones.
+- Node.js
+- Express.js
+- Prisma ORM
+- SQLite
+- JWT
+- bcrypt
+- Docker / Docker Compose
 
 ---
 
-## Objetivo
-
-El objetivo general de la unidad de aprendizaje es desarrollar aplicaciones móviles nativas escalables, seguras y confiables, utilizando los componentes de la plataforma de desarrollo Android y fuentes de datos locales y remotas.
-
-De manera complementaria, durante el curso se busca:
-
-- Identificar los elementos que conforman el ecosistema móvil y su relación con el desarrollo de aplicaciones Android.
-- Diseñar y construir interfaces de usuario efectivas y atractivas.
-- Implementar el manejo y almacenamiento de datos mediante diferentes tecnologías.
-- Integrar APIs y servicios de comunicación con las aplicaciones.
-- Utilizar sensores y dispositivos vestibles.
-- Comprender el proceso de publicación de aplicaciones.
-- Aplicar principios de ingeniería de software, incluyendo planificación, diseño, implementación, control de versiones y pruebas.
-
----
-
-## Tecnologías y herramientas
-
-Durante el desarrollo de las actividades se utilizarán diferentes herramientas y tecnologías relacionadas con el desarrollo de aplicaciones móviles.
-
-| Herramienta / Tecnología | Uso |
-|---|---|
-| Android Studio | Entorno de desarrollo para aplicaciones Android |
-| Kotlin | Desarrollo de aplicaciones Android nativas |
-| XML | Diseño de interfaces mediante Views |
-| Jetpack Compose | Construcción declarativa de interfaces Android |
-| Flutter | Desarrollo de aplicaciones multiplataforma |
-| Dart | Lenguaje utilizado por Flutter |
-| Git | Control de versiones |
-| GitHub | Alojamiento y administración del repositorio |
-| Java Development Kit (JDK) | Compilación y ejecución de aplicaciones |
-| Node.js | Entorno de ejecución para JavaScript |
-| Docker | Ejecución de aplicaciones y servicios mediante contenedores |
-
-
----
-
-## Estructura del repositorio
-
-Las actividades se organizarán en carpetas independientes para facilitar la navegación y mantener separado el código correspondiente a cada práctica o proyecto.
+## Estructura
 
 ```text
-Aplicaciones-Moviles-Nativas/
-│
-├── practica_01/
-│   ├── hola_mundo_xml/
-│   ├── hola_mundo_compose/
-│   ├── hola_mundo_flutter/
-│   ├── img/
-│   └── README.md
-│
-├── practica_02/
-│   └── ...
-│
-├── practica_03/
-│   └── ...
-│
-├── proyecto_final/
-│   └── ...
-│
+DoList/
+├── backend/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── controllers/
+│   │   ├── middleware/
+│   │   ├── routes/
+│   │   ├── utils/
+│   │   └── server.js
+│   ├── prisma/
+│   │   ├── migrations/
+│   │   ├── dev.db
+│   │   └── schema.prisma
+│   ├── uploads/
+│   │   └── avatars/
+│   │       └── default.png
+│   ├── .env
+│   ├── .dockerignore
+│   ├── Dockerfile
+│   ├── package.json
+│   └── package-lock.json
+├── docker-compose.yml
 └── README.md
+```
+
+---
+
+## Configuración
+
+Crear el archivo `backend/.env`:
+
+```env
+DATABASE_URL="file:./dev.db"
+JWT_SECRET="tu_clave_secreta"
+PORT=5000
+```
+
+El archivo `.env` no debe subirse al repositorio.
+
+---
+
+## Ejecución local
+
+Entrar al directorio del backend:
+
+```bash
+cd backend
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Generar Prisma Client:
+
+```bash
+npx prisma generate
+```
+
+Aplicar las migraciones:
+
+```bash
+npx prisma migrate deploy
+```
+
+Iniciar el servidor:
+
+```bash
+npm start
+```
+
+El backend estará disponible en:
+
+```text
+http://localhost:5000
+```
+
+Para desarrollo:
+
+```bash
+npm run dev
+```
+
+---
+
+## Ejecución con Docker
+
+Desde la raíz del proyecto:
+
+```bash
+docker compose up --build
+```
+
+O en segundo plano:
+
+```bash
+docker compose up -d --build
+```
+
+El backend estará disponible en:
+
+```text
+http://localhost:5000
+```
+
+Para detener el contenedor:
+
+```bash
+docker compose down
+```
+
+La base de datos SQLite y los avatares se mantienen mediante volúmenes:
+
+```yaml
+./backend/prisma/dev.db:/app/prisma/dev.db
+./backend/uploads/avatars:/app/uploads/avatars
+```
+
+El archivo `default.png` se incluye como avatar predeterminado. Las imágenes de perfil personalizadas no se incluyen en el repositorio.
+
+---
+
+## API
+
+### Autenticación
+
+| Método | Endpoint | Descripción |
+|---|---|---|
+| POST | `/api/auth/register` | Registrar usuario |
+| POST | `/api/auth/login` | Iniciar sesión |
+| GET | `/api/auth/me` | Obtener usuario autenticado |
+| PUT | `/api/auth/password` | Cambiar contraseña |
+| PUT | `/api/auth/avatar` | Actualizar avatar |
+
+### Tareas
+
+| Método | Endpoint | Descripción |
+|---|---|---|
+| POST | `/api/tasks` | Crear tarea |
+| GET | `/api/tasks` | Obtener tareas |
+| PUT | `/api/tasks/:id` | Actualizar tarea |
+| DELETE | `/api/tasks/:id` | Eliminar tarea |
+
+Los endpoints de tareas requieren autenticación mediante:
+
+```http
+Authorization: Bearer <token>
+```
+
+---
+
+## Características
+
+- Autenticación mediante JWT.
+- Contraseñas almacenadas mediante hash con bcrypt.
+- Normalización de correos electrónicos.
+- CRUD de tareas.
+- Cambio de contraseña.
+- Avatar predeterminado y actualización de foto de perfil.
+- Validación de prioridades y estados.
+- Manejo de fechas mediante `DateTime`.
+- Hora de vencimiento establecida automáticamente a las `23:59`.
+- Manejo de códigos HTTP.
+- Persistencia mediante SQLite.
+- Manejo global de errores.
+- Dockerización del backend.
+
+---
+
+## Códigos HTTP
+
+| Código | Uso |
+|---|---|
+| `200` | Operación exitosa |
+| `201` | Recurso creado |
+| `400` | Datos inválidos |
+| `401` | No autenticado |
+| `404` | Recurso no encontrado |
+| `409` | Conflicto |
+| `500` | Error interno |
+
+---
+
+## Pruebas
+
+Se realizaron pruebas de:
+
+- Registro e inicio de sesión.
+- Autenticación mediante JWT.
+- Cambio de contraseña y gestión de avatar.
+- CRUD de tareas.
+- Validación de datos.
+- Fechas y prioridades.
+- Recursos inexistentes.
+- Códigos HTTP.
+- Conexión con SQLite.
+- Cambio de contraseña.
+- Cambio y persistencia de avatar.
+- Ejecución completa mediante Docker.
+
+**Todas las pruebas fueron realizadas correctamente, incluyendo las pruebas de ejecución y persistencia mediante Docker.**
+
+---
+
+## Autor
+
+**Marco Uriel De la Cruz Velázquez**
+
+Instituto Politécnico Nacional — ESCOM  
+Aplicaciones Móviles Nativas

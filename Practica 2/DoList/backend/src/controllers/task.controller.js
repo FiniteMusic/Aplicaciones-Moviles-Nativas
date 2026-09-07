@@ -155,6 +155,13 @@ const getTaskById = async (req, res) => {
 const updateTask = async (req, res) => {
     try {
         const { id } = req.params;
+        const taskId = Number(id);
+
+        if (isNaN(taskId)) {
+            return res.status(400).json({
+                error: "El ID de la tarea no es válido"
+                });
+            }   
         const {
             title,
             description,

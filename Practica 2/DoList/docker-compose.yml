@@ -14,5 +14,6 @@ services:
 
     volumes:
       - ./backend/prisma/dev.db:/app/prisma/dev.db
+      - ./backend/uploads/avatars:/app/uploads/avatars
 
     restart: unless-stopped
