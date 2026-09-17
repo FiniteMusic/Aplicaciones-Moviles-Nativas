@@ -128,6 +128,39 @@ Se encuentra implementado el manejo local de preferencias relacionadas con la in
 
 Estas preferencias se almacenan mediante **DataStore**.
 
+## Evidencia de funcionamiento
+
+A continuación se muestran capturas de las funcionalidades que se encuentran
+implementadas y funcionales en la versión actual de la aplicación.
+
+### Registro de usuario
+
+El proceso de registro permite crear una nueva cuenta proporcionando los datos
+solicitados. Una vez completado el registro correctamente, la aplicación
+continúa con el proceso de autenticación.
+
+<img width="361" height="800" alt="image" src="https://github.com/user-attachments/assets/01eb8cee-14e4-4c4a-9614-8806464753f2" />
+
+
+### Inicio de sesión
+
+La pantalla de inicio de sesión permite al usuario autenticarse mediante su
+correo electrónico y contraseña. Después de una autenticación exitosa, la
+sesión se almacena localmente y el usuario puede acceder a la pantalla
+principal de la aplicación.
+
+<img width="366" height="802" alt="image" src="https://github.com/user-attachments/assets/d79b8683-a8b1-4b33-8b44-1300a78fd4a1" />
+
+
+### Sesión iniciada
+
+Después de iniciar sesión correctamente, la aplicación muestra la pantalla
+principal y permite consultar la información asociada al usuario autenticado.
+
+<img width="361" height="798" alt="image" src="https://github.com/user-attachments/assets/0136b710-20bd-48f7-8c7f-758c317dfbab" />
+<img width="362" height="800" alt="image" src="https://github.com/user-attachments/assets/4d9f049e-45ed-4b43-bd96-d7a48ab3a084" />
+
+
 ---
 
 ## Problemas y bugs conocidos
