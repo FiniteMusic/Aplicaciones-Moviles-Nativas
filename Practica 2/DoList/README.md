@@ -408,4 +408,8 @@ A partir de esta base se continuará con la integración y corrección del resto
 
 ## Autor
 
-Proyecto desarrollado por Marco Uriel De la Cruz Velazquez.
+**Marco Uriel De la Cruz Velázquez**
+
+Instituto Politécnico Nacional — ESCOM  
+Aplicaciones Móviles Nativas
+
