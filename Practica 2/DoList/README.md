@@ -183,6 +183,124 @@ El desarrollo continuará principalmente en el siguiente orden:
 
 ---
 
+## Estructura y componentes principales
+
+La aplicación Android está organizada por responsabilidades para separar el acceso a datos, la lógica de dominio, la presentación y los recursos visuales. Su estructura principal es la siguiente:
+
+```text
+app/
+├── manifests/
+│   └── AndroidManifest.xml
+├── kotlin+java/com.marcudlcv.dolist/
+│   ├── data/
+│   │   ├── local/
+│   │   │   └── TokenStorage.kt
+│   │   ├── mapper/
+│   │   ├── preferences/
+│   │   │   └── ThemePreferences.kt
+│   │   ├── remote/
+│   │   │   ├── api/
+│   │   │   │   ├── ApiClient
+│   │   │   │   └── ApiService
+│   │   │   ├── dto/
+│   │   │   │   ├── auth/AuthDto.kt
+│   │   │   │   └── task/TaskDto.kt
+│   │   │   └── interceptor/AuthInterceptor
+│   │   ├── repository/
+│   │   │   ├── AuthRepository.kt
+│   │   │   └── TaskRepository
+│   │   └── AppContainer
+│   ├── domain.model/
+│   │   ├── Priority
+│   │   └── Task.kt
+│   ├── ui/
+│   │   ├── components/
+│   │   │   ├── AuthBackground.kt
+│   │   │   ├── AvatarImage.kt
+│   │   │   ├── DoListBackground.kt
+│   │   │   ├── DoListLogo.kt
+│   │   │   ├── GlassBottomNav.kt
+│   │   │   ├── GlassButton.kt
+│   │   │   ├── GlassSurface.kt
+│   │   │   ├── GlassTextField.kt
+│   │   │   ├── PriorityChip.kt
+│   │   │   └── TaskCard.kt
+│   │   ├── navigation/
+│   │   │   ├── DoListNavHost.kt
+│   │   │   └── Route
+│   │   ├── screens/
+│   │   │   ├── auth/
+│   │   │   │   ├── AuthViewModel.kt
+│   │   │   │   ├── AuthViewModelFactory
+│   │   │   │   ├── LoginScreen.kt
+│   │   │   │   └── RegisterScreen.kt
+│   │   │   ├── home/HomeScreen.kt
+│   │   │   ├── onboarding/OnboardingScreen.kt
+│   │   │   ├── profile/
+│   │   │   │   ├── ChangeAvatarScreen.kt
+│   │   │   │   ├── ChangePasswordScreen.kt
+│   │   │   │   └── ProfileScreen.kt
+│   │   │   ├── settings/
+│   │   │   └── task/
+│   │   │       ├── AllTasksScreen.kt
+│   │   │       ├── DeleteTaskScreen.kt
+│   │   │       └── TaskFormScreen.kt
+│   │   └── theme/
+│   │       ├── Color.kt
+│   │       ├── GlassTokens
+│   │       ├── Shape.kt
+│   │       ├── Theme.kt
+│   │       ├── ThemeMode
+│   │       └── Type.kt
+│   ├── viewmodel/
+│   │   ├── TaskViewModel.kt
+│   │   └── TaskViewModelFactory
+│   ├── DoListApplication.kt
+│   └── MainActivity.kt
+└── res/
+    ├── drawable/
+    │   ├── dolist_isotipo.png
+    │   ├── dolist_logo_dark.png
+    │   ├── dolist_logo_light.png
+    │   ├── dolist_monochrome_dark.png
+    │   ├── dolist_monochrome_light.png
+    │   ├── ic_launcher_background.xml
+    │   └── ic_launcher_foreground.xml
+    └── font/
+        ├── inter_light.ttf
+        ├── inter_medium.ttf
+        ├── inter_regular.ttf
+        ├── inter_semibold.ttf
+        └── outfit_black.ttf
+```
+
+### Visión general de los componentes
+
+- **`data/`**: contiene todo lo relacionado con el manejo y acceso a datos de la aplicación, incluyendo almacenamiento local, comunicación con la API y repositorios.
+- **`data/local/`**: administra información que debe conservarse localmente, principalmente el token de autenticación utilizado para mantener la sesión.
+- **`data/mapper/`**: está destinado a la transformación de datos entre las representaciones utilizadas por la capa remota y los modelos internos de la aplicación.
+- **`data/preferences/`**: gestiona las preferencias locales de la aplicación, como la configuración del tema visual.
+- **`data/remote/`**: contiene la comunicación con el backend mediante Retrofit, incluyendo los servicios de la API, los modelos de transferencia de datos (DTO) y el interceptor de autenticación.
+- **`data/repository/`**: funciona como intermediario entre la interfaz y las fuentes de datos. Centraliza las operaciones relacionadas con autenticación, usuarios y tareas.
+- **`AppContainer`**: centraliza las dependencias principales de la aplicación y proporciona acceso a los servicios y repositorios requeridos.
+- **`domain.model/`**: contiene los modelos principales utilizados por la aplicación, como las tareas y sus prioridades.
+- **`ui/components/`**: reúne los componentes visuales reutilizables, como botones, campos de texto, tarjetas de tareas, navegación inferior, fondos, logotipos, avatares y elementos del diseño Liquid Glass.
+- **`ui/navigation/`**: administra la navegación entre las diferentes pantallas de la aplicación y define las rutas disponibles.
+- **`ui/screens/`**: contiene las pantallas principales de DoList, organizadas por funcionalidad:
+  - **`auth/`**: registro, inicio de sesión y lógica de presentación asociada con la autenticación.
+  - **`home/`**: pantalla principal y visualización de tareas.
+  - **`onboarding/`**: introducción a la aplicación.
+  - **`profile/`**: perfil, cambio de avatar y cambio de contraseña.
+  - **`settings/`**: configuración de la aplicación.
+  - **`task/`**: creación, edición, eliminación y visualización de tareas.
+- **`ui/theme/`**: define el sistema visual de la aplicación, incluyendo colores, tipografías, formas, tokens de diseño Liquid Glass y configuración de temas claro, oscuro y del sistema.
+- **`viewmodel/`**: contiene la lógica de presentación y administra el estado de las tareas antes de comunicar los cambios a las pantallas.
+- **`DoListApplication.kt`**: inicializa la aplicación y sus dependencias principales.
+- **`MainActivity.kt`**: es el punto de entrada de la aplicación Android y se encarga de iniciar la interfaz desarrollada con Jetpack Compose.
+- **`res/`**: contiene los recursos visuales utilizados por la aplicación, como logotipos, iconos, recursos del launcher y tipografías personalizadas.
+
+---
+
 ## Arquitectura general
 
 DoList está dividido en dos componentes principales:
