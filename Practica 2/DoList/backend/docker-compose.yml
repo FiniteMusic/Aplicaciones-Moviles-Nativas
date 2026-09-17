@@ -1,7 +1,7 @@
 services:
   backend:
     build:
-      context: ./backend
+      context: .
       dockerfile: Dockerfile
 
     container_name: dolist-backend
@@ -10,10 +10,10 @@ services:
       - "5000:5000"
 
     env_file:
-      - ./backend/.env
+      - .env
 
     volumes:
-      - ./backend/prisma/dev.db:/app/prisma/dev.db
-      - ./backend/uploads/avatars:/app/uploads/avatars
+      - ./prisma/dev.db:/app/prisma/dev.db
+      - ./uploads/avatars:/app/uploads/avatars
 
     restart: unless-stopped
