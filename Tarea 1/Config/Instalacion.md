@@ -51,9 +51,6 @@ obtenidas en el equipo):
 
   Git                                         \[2.54.0.windows.1\]
 
-  `@modelcontextprotocol/server-filesystem`   \[Completar si se conoce; la
-                                              configuración con `npx -y` sin
-                                              `@versión` no fija una versión\]
 
   Fecha de verificación                       \[20 de Semptiembre 2026\]
   -------------------------------------------------------------------------------
