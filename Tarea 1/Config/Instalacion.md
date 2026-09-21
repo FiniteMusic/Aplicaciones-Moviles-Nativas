@@ -37,8 +37,7 @@ accede directamente al disco.
   Transporte              `stdio`
   Control de versiones    Git
 
-**Versiones efectivamente utilizadas** (completar con las salidas
-obtenidas en el equipo):
+**Versiones efectivamente utilizadas**:
 
   -------------------------------------------------------------------------------
   Componente                                  Versión
@@ -51,9 +50,6 @@ obtenidas en el equipo):
 
   Git                                         \[2.54.0.windows.1\]
 
-  `@modelcontextprotocol/server-filesystem`   \[Completar si se conoce; la
-                                              configuración con `npx -y` sin
-                                              `@versión` no fija una versión\]
 
   Fecha de verificación                       \[20 de Semptiembre 2026\]
   -------------------------------------------------------------------------------
@@ -75,20 +71,20 @@ la configuración como `@modelcontextprotocol/server-filesystem@VERSION`.
 La ruta usada en el equipo donde se realizó la práctica fue:
 
 ``` text
-C:\Users\Marc_\Documents\ESCOM\Aplicaciones Moviles Nativas\Aplicaciones-Moviles-Nativas\Tarea 1\Implementacion\Public
+C:\Users\Marc_\Documents\ESCOM\Aplicaciones Moviles Nativas\Aplicaciones-Moviles-Nativas\Tarea 1\Config\Public
 ```
 
 En una máquina distinta, sustituir esta ruta por la ruta absoluta de la
-carpeta `Implementacion\Public` del repositorio clonado.
+carpeta `Config\Public` del repositorio clonado.
 
 Desde PowerShell, ubicado en la raíz de `Tarea 1`, se puede crear la
 carpeta y dos archivos iniciales mediante:
 
 ``` powershell
-New-Item -ItemType Directory -Force -Path ".\Implementacion\Public"
-Set-Content -Path ".\Implementacion\Public\ejemplo.txt" -Value "Este es un archivo de prueba para el servidor MCP."
-Set-Content -Path ".\Implementacion\Public\notas.txt" -Value "Investigacion sobre el protocolo MCP y sus herramientas."
-Get-ChildItem ".\Implementacion\Public"
+New-Item -ItemType Directory -Force -Path ".\Config\Public"
+Set-Content -Path ".\Config\Public\ejemplo.txt" -Value "Este es un archivo de prueba para el servidor MCP."
+Set-Content -Path ".\Config\Public\notas.txt" -Value "Investigacion sobre el protocolo MCP y sus herramientas."
+Get-ChildItem ".\Config\Public"
 ```
 
 **Precaución:** `Set-Content` reemplaza el contenido si el archivo ya
@@ -113,7 +109,7 @@ siguiente contenido:
         "npx",
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "C:\\Users\\Marc_\\Documents\\ESCOM\\Aplicaciones Moviles Nativas\\Aplicaciones-Moviles-Nativas\\Tarea 1\\Implementacion\\Public"
+        "C:\\Users\\Marc_\\Documents\\ESCOM\\Aplicaciones Moviles Nativas\\Aplicaciones-Moviles-Nativas\\Tarea 1\\Config\\Public"
       ]
     }
   }
@@ -137,7 +133,7 @@ invertidas están duplicadas porque el archivo utiliza sintaxis JSON.
 
 Durante la primera verificación, VS Code tenía abierta la carpeta
 completa `Tarea 1`. Aunque en los argumentos se indicó
-`Implementacion\Public`, la herramienta `list_allowed_directories`
+`Config\Public`, la herramienta `list_allowed_directories`
 devolvió la ruta de `Tarea 1`.
 
 La salida del servidor incluyó:
@@ -158,7 +154,7 @@ Context Protocol, s. f.-a; Model Context Protocol, s. f.-b).
 1.  Conservar la ventana principal de VS Code para la documentación de
     `Tarea 1`.
 2.  Abrir **otra ventana de VS Code** y seleccionar exclusivamente
-    `Tarea 1\Implementacion\Public` mediante **Archivo \> Abrir
+    `Tarea 1\Config\Public` mediante **Archivo \> Abrir
     carpeta**.
 3.  Crear también `Public\.vscode\mcp.json` con la misma configuración
     anterior, ajustando la ruta absoluta si se reproduce en otro equipo.
@@ -197,7 +193,7 @@ En la ventana que tiene abierta `Public`:
 
 **Resultado de la verificación comunicada:** el servidor quedó en
 ejecución, VS Code descubrió **14 herramientas** y la consulta de
-directorios autorizados mostró la carpeta `Implementacion\Public`
+directorios autorizados mostró la carpeta `Config\Public`
 deseada.
 
 Para comprobar el funcionamiento sin recurrir a herramientas nativas del
@@ -249,13 +245,13 @@ través de ese servidor**. Asimismo, el acceso a subdirectorios de
 1.  Instalar Windows 11, VS Code, Node.js con npm y Git; iniciar sesión
     en GitHub Copilot y habilitar el modo Agente.
 2.  Clonar o descargar el repositorio y abrir su carpeta principal.
-3.  Preparar `Implementacion\Public` y sus archivos iniciales, si aún no
+3.  Preparar `Config\Public` y sus archivos iniciales, si aún no
     existen.
 4.  Reemplazar la ruta absoluta del último argumento en **ambos**
     archivos `mcp.json` por la ubicación local de
-    `Implementacion\Public`.
+    `Config\Public`.
 5.  Abrir una segunda ventana de VS Code directamente en
-    `Implementacion\Public`.
+    `Config\Public`.
 6.  Iniciar el servidor `filesystem` desde esa ventana; permitir la
     descarga inicial del paquete si es necesario.
 7.  Comprobar el estado **En ejecución**, el catálogo de herramientas y
