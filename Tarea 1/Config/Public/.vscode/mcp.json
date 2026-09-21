@@ -8,7 +8,7 @@
         "npx",
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "C:\\Users\\Marc_\\Documents\\ESCOM\\Aplicaciones Moviles Nativas\\Aplicaciones-Moviles-Nativas\\Tarea 1\\Implementacion\\Public"
+        "C:\\Users\\Marc_\\Documents\\ESCOM\\Aplicaciones Moviles Nativas\\Aplicaciones-Moviles-Nativas\\Tarea 1\\Config\\Public"
       ]
     }
   }

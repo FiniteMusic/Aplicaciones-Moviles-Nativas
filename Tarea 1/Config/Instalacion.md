@@ -42,16 +42,16 @@ accede directamente al disco.
   -------------------------------------------------------------------------------
   Componente                                  Versión
   ------------------------------------------- -----------------------------------
-  Windows 11                                  \[Windows 11 Home Single Language\]
+  Windows 11                                  [Windows 11 Home Single Language]
 
-  Node.js                                     \[v24.15.0\]
+  Node.js                                     [v24.15.0]
 
-  npm                                         \[11.12.1\]
+  npm                                         [11.12.1]
 
-  Git                                         \[2.54.0.windows.1\]
+  Git                                         [2.54.0.windows.1]
 
 
-  Fecha de verificación                       \[20 de Semptiembre 2026\]
+  Fecha de verificación                       [20 de Semptiembre 2026]
   -------------------------------------------------------------------------------
 
 En PowerShell, comprobar:

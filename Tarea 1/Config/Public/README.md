@@ -18,7 +18,7 @@ límite de seguridad.
 
   Transporte:                          `stdio`
 
-  Directorio autorizado:               `C:\Users\Marc_\Documents\ESCOM\Aplicaciones Moviles Nativas\Aplicaciones-Moviles-Nativas\Tarea 1\Implementacion\Public`
+  Directorio autorizado:               `C:\Users\Marc_\Documents\ESCOM\Aplicaciones Moviles Nativas\Aplicaciones-Moviles-Nativas\Tarea 1\Config\Public`
 
   Node.js / npm:              v24.15.0/ 11.12.1
 
@@ -37,7 +37,7 @@ la terminal para ejecutar las operaciones demostradas.
 servidor MCP filesystem y muestra todas las rutas autorizadas».
 
 **Resultado esperado:** únicamente la ruta completa de
-`Implementacion\Public`.
+`Config\Public`.
 
 **Resultado observado:** 
 
