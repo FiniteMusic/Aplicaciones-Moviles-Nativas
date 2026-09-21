@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "filesystem": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\Marc_\\Documents\\ESCOM\\Aplicaciones Moviles Nativas\\Aplicaciones-Moviles-Nativas\\Tarea 1\\Implementacion\\Public"
+      ]
+    }
+  }
+}

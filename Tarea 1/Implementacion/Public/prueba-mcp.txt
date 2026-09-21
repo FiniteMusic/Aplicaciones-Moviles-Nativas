@@ -1,0 +1,1 @@
+Este archivo fue creado y posteriormente modificado mediante el servidor MCP Filesystem utilizando Visual Studio Code como cliente
