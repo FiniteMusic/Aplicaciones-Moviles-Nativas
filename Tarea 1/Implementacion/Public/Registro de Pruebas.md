@@ -42,7 +42,7 @@ servidor MCP filesystem y muestra todas las rutas autorizadas».
 **Resultado observado:** 
 
 
-![alt text](image.png)
+![alt text](image-2.png)
 
 **Estado:** \[Exitoso\].
 
