@@ -37,8 +37,7 @@ accede directamente al disco.
   Transporte              `stdio`
   Control de versiones    Git
 
-**Versiones efectivamente utilizadas** (completar con las salidas
-obtenidas en el equipo):
+**Versiones efectivamente utilizadas**:
 
   -------------------------------------------------------------------------------
   Componente                                  Versión
