@@ -42,7 +42,8 @@ servidor MCP filesystem y muestra todas las rutas autorizadas».
 **Resultado observado:** 
 
 
-![alt text](image-2.png)
+<img width="815" height="270" alt="image" src="https://github.com/user-attachments/assets/11f68c1f-e165-4841-8faa-1d122c403060" />
+
 
 **Estado:** \[Exitoso\].
 
@@ -62,7 +63,8 @@ que realmente existan.
 **Resultado observado:** 
 
 
-![alt text](image-1.png)
+<img width="826" height="353" alt="image" src="https://github.com/user-attachments/assets/47fd000f-267c-4f57-9ffe-ed8e0fb543f6" />
+
 
 **Estado:** \[Exitoso\].
 
@@ -84,7 +86,8 @@ su contenido sin modificarlo».
 
 **Resultado observado:** 
 
-![alt text](image-2.png)
+<img width="817" height="337" alt="image" src="https://github.com/user-attachments/assets/ab0bf014-a327-4d9b-b56a-d214f979f085" />
+
 
 **Estado:** \[Exitoso\].
 
@@ -107,7 +110,8 @@ utilizando Visual Studio Code como cliente».
 **Resultado observado:** 
 
 
-![alt text](image-3.png)
+<img width="530" height="398" alt="image" src="https://github.com/user-attachments/assets/deeb11d0-fdb9-475e-8dba-879869e3b692" />
+
 
 **Estado:** \[Exitoso\].
 
@@ -130,7 +134,8 @@ el resto del texto».
 
 **Resultado observado:** 
 
-![alt text](image-4.png)
+<img width="555" height="355" alt="image" src="https://github.com/user-attachments/assets/bcd91096-83d8-46cc-8ff4-64decd8bd86b" />
+
 
 **Estado:** \[Exitoso\].
 
@@ -152,7 +157,8 @@ dentro del directorio autorizado».
 
 **Resultado observado:** 
 
-![alt text](image-5.png)
+<img width="547" height="387" alt="image" src="https://github.com/user-attachments/assets/bdf78e15-45ff-4ac3-9c26-b73bc4366f8f" />
+
 
 **Estado:** \[Exitoso\].
 
@@ -177,7 +183,8 @@ respuesta literal de la herramienta, incluido cualquier error».
 
 **Resultado observado:** 
 
-![alt text](image-6.png)
+<img width="818" height="381" alt="image" src="https://github.com/user-attachments/assets/baa4cacf-5c42-482d-8eae-de7d92e726bf" />
+
 
 **Estado:** \[Acceso rechazado\].
 
