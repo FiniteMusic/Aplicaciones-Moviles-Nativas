@@ -270,9 +270,7 @@ La instalación muestra que MCP permite a un agente solicitar operaciones
 de archivos mediante herramientas publicadas por un servidor separado.
 La verificación de `list_allowed_directories` es indispensable porque el
 alcance efectivo del servidor puede actualizarse mediante las raíces
-comunicadas por el cliente. La reproducción correcta requiere documentar
-tanto el archivo de configuración como la carpeta abierta en la ventana
-de VS Code que ejecuta el servidor.
+comunicadas por el cliente.
 
 ## Referencias
 
