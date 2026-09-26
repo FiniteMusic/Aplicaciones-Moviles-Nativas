@@ -7,6 +7,11 @@ import androidx.navigation.compose.rememberNavController
 import com.marcudlcv.f1uigaragecompose.ui.screens.HomeScreen
 import com.marcudlcv.f1uigaragecompose.ui.screens.PlaceholderScreen
 import com.marcudlcv.f1uigaragecompose.ui.screens.TextInputScreen
+import com.marcudlcv.f1uigaragecompose.ui.screens.ButtonsScreen
+import com.marcudlcv.f1uigaragecompose.ui.screens.SelectionScreen
+import com.marcudlcv.f1uigaragecompose.ui.screens.ListsScreen
+import com.marcudlcv.f1uigaragecompose.ui.screens.FeedbackScreen
+import com.marcudlcv.f1uigaragecompose.ui.screens.LayoutsScreen
 
 @Composable
 fun GarageNavigation() {
@@ -32,33 +37,23 @@ fun GarageNavigation() {
         }
 
         composable(GarageRoutes.BUTTONS) {
-            PlaceholderScreen(
-                title = "McLaren · Botones"
-            )
+            ButtonsScreen()
         }
 
         composable(GarageRoutes.SELECTION) {
-            PlaceholderScreen(
-                title = "Mercedes · Selecciones"
-            )
+            SelectionScreen()
         }
 
         composable(GarageRoutes.LISTS) {
-            PlaceholderScreen(
-                title = "Williams · Listas"
-            )
+            ListsScreen()
         }
 
         composable(GarageRoutes.FEEDBACK) {
-            PlaceholderScreen(
-                title = "Aston Martin · Retroalimentación"
-            )
+            FeedbackScreen()
         }
 
         composable(GarageRoutes.LAYOUTS) {
-            PlaceholderScreen(
-                title = "Alpine · Layouts"
-            )
+            LayoutsScreen()
         }
     }
 }

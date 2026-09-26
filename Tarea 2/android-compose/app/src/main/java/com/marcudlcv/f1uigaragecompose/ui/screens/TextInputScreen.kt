@@ -1,6 +1,8 @@
 package com.marcudlcv.f1uigaragecompose.ui.screens
 
 import android.widget.Toast
+import com.marcudlcv.f1uigaragecompose.data.Driver
+import com.marcudlcv.f1uigaragecompose.data.DriverRepository
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -576,14 +578,42 @@ fun TextInputScreen() {
                     if (
                         nameError == null &&
                         numberError == null &&
-                        teamError == null
+                        teamError == null &&
+                        number != null
                     ) {
 
-                        Toast.makeText(
-                            context,
-                            "Piloto validado: $driverName - #$number - $selectedTeam",
-                            Toast.LENGTH_LONG
-                        ).show()
+                        val driver = Driver(
+                            name = driverName.trim(),
+                            number = number,
+                            team = selectedTeam
+                        )
+
+                        val registered =
+                            DriverRepository.addDriver(driver)
+
+                        if (registered) {
+
+                            Toast.makeText(
+                                context,
+                                "Piloto registrado: ${driver.name} #${driver.number}",
+                                Toast.LENGTH_SHORT
+                            ).show()
+
+                            driverName = ""
+                            driverNumber = ""
+                            selectedTeam = ""
+
+                        } else {
+
+                            numberError =
+                                "El número $number ya está registrado"
+
+                            Toast.makeText(
+                                context,
+                                "Número de piloto duplicado",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
                     }
                 },
                 modifier = Modifier.fillMaxWidth(),
