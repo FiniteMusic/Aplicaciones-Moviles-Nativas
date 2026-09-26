@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../theme/garage_theme.dart';
 
 class TeamCategoryCard extends StatelessWidget {

@@ -43,14 +43,10 @@ class GarageTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: GarageColors.surface,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(14),
-        ),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(14)),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
-          borderSide: const BorderSide(
-            color: GarageColors.border,
-          ),
+          borderSide: const BorderSide(color: GarageColors.border),
         ),
       ),
     );

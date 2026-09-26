@@ -2,24 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../theme/garage_theme.dart';
 import '../widgets/team_category_card.dart';
-import 'placeholder_screen.dart';
+import 'text_input_screen.dart';
+import 'buttons_screen.dart';
+import 'selection_screen.dart';
+import 'lists_screen.dart';
+import 'feedback_screen.dart';
+import 'layouts_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
-  void _openScreen(
-    BuildContext context,
-    String title,
-  ) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => PlaceholderScreen(
-          title: title,
-        ),
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,13 +38,12 @@ class HomeScreen extends StatelessWidget {
             TeamCategoryCard(
               team: 'Ferrari',
               title: 'Entradas de texto',
-              description:
-                  'Campos de texto, validación, búsqueda y registro de pilotos.',
+              description: 'Campos de texto, validación, búsqueda y registro de pilotos.',
               accentColor: GarageColors.ferrari,
               onTap: () {
-                _openScreen(
+                Navigator.push(
                   context,
-                  'Ferrari · Entradas de texto',
+                  MaterialPageRoute(builder: (_) => const TextInputScreen()),
                 );
               },
             ),
@@ -67,9 +57,9 @@ class HomeScreen extends StatelessWidget {
                   'Acciones, botones, interruptores y controles interactivos.',
               accentColor: GarageColors.mclaren,
               onTap: () {
-                _openScreen(
+                Navigator.push(
                   context,
-                  'McLaren · Botones',
+                  MaterialPageRoute(builder: (_) => const ButtonsScreen()),
                 );
               },
             ),
@@ -79,13 +69,12 @@ class HomeScreen extends StatelessWidget {
             TeamCategoryCard(
               team: 'Mercedes',
               title: 'Selecciones',
-              description:
-                  'Casillas, opciones, listas desplegables y controles de selección.',
+              description: 'Casillas, opciones, listas desplegables y controles de selección.',
               accentColor: GarageColors.mercedes,
               onTap: () {
-                _openScreen(
+                Navigator.push(
                   context,
-                  'Mercedes · Selecciones',
+                  MaterialPageRoute(builder: (_) => const SelectionScreen()),
                 );
               },
             ),
@@ -95,13 +84,12 @@ class HomeScreen extends StatelessWidget {
             TeamCategoryCard(
               team: 'Williams',
               title: 'Listas',
-              description:
-                  'Visualización de pilotos y escuderías mediante diferentes listas.',
+              description: 'Visualización de pilotos y escuderías mediante diferentes listas.',
               accentColor: GarageColors.williams,
               onTap: () {
-                _openScreen(
+                Navigator.push(
                   context,
-                  'Williams · Listas',
+                  MaterialPageRoute(builder: (_) => const ListsScreen()),
                 );
               },
             ),
@@ -115,9 +103,9 @@ class HomeScreen extends StatelessWidget {
                   'Mensajes, diálogos, errores e indicadores de progreso.',
               accentColor: GarageColors.astonMartin,
               onTap: () {
-                _openScreen(
+                Navigator.push(
                   context,
-                  'Aston Martin · Retroalimentación',
+                  MaterialPageRoute(builder: (_) => const FeedbackScreen()),
                 );
               },
             ),
@@ -131,9 +119,9 @@ class HomeScreen extends StatelessWidget {
                   'Distribución y organización de elementos de la interfaz.',
               accentColor: GarageColors.alpine,
               onTap: () {
-                _openScreen(
+                Navigator.push(
                   context,
-                  'Alpine · Layouts',
+                  MaterialPageRoute(builder: (_) => const LayoutsScreen()),
                 );
               },
             ),
@@ -189,10 +177,7 @@ class HomeScreen extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       'Flutter · Dart',
-                      style: TextStyle(
-                        color: Color(0xFFD5D8DF),
-                        fontSize: 14,
-                      ),
+                      style: TextStyle(color: Color(0xFFD5D8DF), fontSize: 14),
                     ),
                   ),
                 ],
@@ -201,36 +186,12 @@ class HomeScreen extends StatelessWidget {
 
             Row(
               children: const [
-                Expanded(
-                  child: _HeaderColor(
-                    color: GarageColors.ferrari,
-                  ),
-                ),
-                Expanded(
-                  child: _HeaderColor(
-                    color: GarageColors.mclaren,
-                  ),
-                ),
-                Expanded(
-                  child: _HeaderColor(
-                    color: GarageColors.mercedes,
-                  ),
-                ),
-                Expanded(
-                  child: _HeaderColor(
-                    color: GarageColors.williams,
-                  ),
-                ),
-                Expanded(
-                  child: _HeaderColor(
-                    color: GarageColors.astonMartin,
-                  ),
-                ),
-                Expanded(
-                  child: _HeaderColor(
-                    color: GarageColors.alpine,
-                  ),
-                ),
+                Expanded(child: _HeaderColor(color: GarageColors.ferrari)),
+                Expanded(child: _HeaderColor(color: GarageColors.mclaren)),
+                Expanded(child: _HeaderColor(color: GarageColors.mercedes)),
+                Expanded(child: _HeaderColor(color: GarageColors.williams)),
+                Expanded(child: _HeaderColor(color: GarageColors.astonMartin)),
+                Expanded(child: _HeaderColor(color: GarageColors.alpine)),
               ],
             ),
           ],
@@ -243,15 +204,10 @@ class HomeScreen extends StatelessWidget {
 class _HeaderColor extends StatelessWidget {
   final Color color;
 
-  const _HeaderColor({
-    required this.color,
-  });
+  const _HeaderColor({required this.color});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 6,
-      color: color,
-    );
+    return Container(height: 6, color: color);
   }
 }
