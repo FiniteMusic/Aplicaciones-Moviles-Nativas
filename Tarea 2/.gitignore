@@ -1,0 +1,25 @@
+# Android Studio
+.idea/
+*.iml
+.gradle/
+build/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+coverage/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.log
+*.tmp

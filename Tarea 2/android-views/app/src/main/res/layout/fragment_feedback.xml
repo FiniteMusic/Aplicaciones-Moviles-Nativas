@@ -1,6 +1,470 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/garage_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <!-- ================================= -->
+        <!-- ENCABEZADO ASTON MARTIN          -->
+        <!-- ================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="28dp"
+
+            app:cardBackgroundColor="@color/garage_header"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="ASTON MARTIN · SECCIÓN 05"
+
+                        android:textColor="#73D8BE"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+
+                        android:text="Centro de notificaciones"
+
+                        android:textColor="@color/f1_white"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="Explora los componentes que informan al usuario sobre acciones, errores y procesos en curso."
+
+                        android:textColor="#D5D8DF"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+
+                    android:background="@color/team_astonmartin" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================= -->
+        <!-- 01 - TOAST                        -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="1. Toast"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Muestra una notificación breve que desaparece automáticamente. Es útil para comunicar el resultado de una acción sencilla."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonShowToast"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Enviar notificación"
+
+            android:textColor="@color/f1_white"
+
+            app:backgroundTint="@color/accent_astonmartin"
+            app:cornerRadius="12dp" />
+
+
+        <!-- ================================= -->
+        <!-- 02 - SNACKBAR                     -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="2. Snackbar"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Presenta un mensaje temporal dentro de la aplicación. A diferencia de Toast, puede incluir una acción para el usuario."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonShowSnackbar"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Enviar instrucción al piloto"
+
+            android:textColor="@color/f1_white"
+
+            app:backgroundTint="@color/accent_astonmartin"
+            app:cornerRadius="12dp" />
+
+
+        <!-- ================================= -->
+        <!-- 03 - ALERTDIALOG                  -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="3. AlertDialog"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Abre una ventana modal para presentar información importante o solicitar confirmación antes de ejecutar una acción."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonShowDialog"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Solicitar parada en boxes"
+
+            android:textColor="@color/f1_white"
+
+            app:backgroundTint="@color/accent_astonmartin"
+            app:cornerRadius="12dp" />
+
+
+        <!-- ================================= -->
+        <!-- 04 - PROGRESSBAR HORIZONTAL       -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="4. ProgressBar horizontal"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Representa visualmente cuánto ha avanzado una operación. Es apropiado cuando se puede estimar el porcentaje completado."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textProgressPercentage"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Análisis de telemetría: 0 %"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressTelemetry"
+
+            style="?android:attr/progressBarStyleHorizontal"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="12dp"
+
+            android:indeterminate="false"
+
+            android:max="100"
+            android:progress="0"
+
+            android:progressTint="@color/accent_astonmartin" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonStartProgress"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="12dp"
+
+            android:text="Analizar telemetría"
+
+            android:textColor="@color/f1_white"
+
+            app:backgroundTint="@color/accent_astonmartin"
+            app:cornerRadius="12dp" />
+
+
+        <!-- ================================= -->
+        <!-- 05 - PROGRESSBAR CIRCULAR         -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="5. ProgressBar circular"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Indica que existe una operación en curso cuando todavía no se conoce su duración o porcentaje de avance."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <ProgressBar
+            android:id="@+id/progressCircular"
+
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginBottom="12dp"
+
+            android:indeterminate="true"
+            android:indeterminateTint="@color/accent_astonmartin"
+
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCircularProgress"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Sincronizar datos"
+
+            android:textColor="@color/f1_white"
+
+            app:backgroundTint="@color/accent_astonmartin"
+            app:cornerRadius="12dp" />
+
+
+        <!-- ================================= -->
+        <!-- 06 - MENSAJE DE ERROR             -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="6. TextInputLayout.error"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Muestra un mensaje de validación asociado directamente con un campo. Ayuda al usuario a identificar qué debe corregir."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutRadioCode"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Código de radio"
+
+            app:boxBackgroundColor="@color/garage_surface"
+            app:boxStrokeColor="@color/accent_astonmartin">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputRadioCode"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:inputType="textCapCharacters"
+
+                android:maxLength="6" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonValidateRadio"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="12dp"
+
+            android:text="Validar código"
+
+            android:textColor="@color/f1_white"
+
+            app:backgroundTint="@color/accent_astonmartin"
+            app:cornerRadius="12dp" />
+
+
+        <!-- ================================= -->
+        <!-- ESTADO GENERAL                    -->
+        <!-- ================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+
+            app:cardBackgroundColor="@color/garage_surface"
+            app:cardCornerRadius="16dp"
+
+            app:strokeColor="@color/garage_border"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="ESTADO DEL EQUIPO"
+
+                    android:textColor="@color/accent_astonmartin"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textFeedbackStatus"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="8dp"
+
+                    android:text="Sistema de notificaciones disponible."
+
+                    android:textColor="@color/garage_text_primary"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

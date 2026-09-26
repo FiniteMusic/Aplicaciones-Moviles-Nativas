@@ -1,9 +1,20 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.F1UIGarageViews" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+
+    <style
+        name="Theme.F1UIGarageViews"
+        parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/team_ferrari</item>
+        <item name="colorPrimaryVariant">@color/accent_ferrari</item>
+        <item name="colorOnPrimary">@color/f1_white</item>
+
+        <item name="colorSurface">@color/garage_surface</item>
+        <item name="colorOnSurface">@color/garage_text_primary</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/garage_background</item>
+        <item name="android:navigationBarColor">@color/garage_background</item>
+
     </style>
 
-    <style name="Theme.F1UIGarageViews" parent="Base.Theme.F1UIGarageViews" />
 </resources>

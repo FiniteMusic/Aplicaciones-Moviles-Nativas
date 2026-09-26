@@ -1,6 +1,437 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/garage_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- ENCABEZADO MCLAREN -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="28dp"
+
+            app:cardBackgroundColor="@color/garage_header"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="MCLAREN · SECCIÓN 02"
+                        android:textColor="#FFB86B"
+
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+
+                        android:text="Centro de control"
+                        android:textColor="@color/f1_white"
+
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="Explora botones y acciones mediante un panel de operaciones de carrera."
+
+                        android:textColor="#D5D8DF"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+
+                    android:background="@color/team_mclaren" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- 1. BUTTON -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="1. Button"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Ejecuta una acción cuando el usuario lo presiona. Es uno de los controles básicos de interacción."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/buttonStartRace"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Iniciar carrera" />
+
+
+        <!-- 2. MATERIAL BUTTON -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="2. MaterialButton"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Botón de Material Components que permite personalizar colores, esquinas y apariencia."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonQualifying"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Activar clasificación"
+            android:textColor="@color/f1_white"
+
+            app:backgroundTint="@color/accent_mclaren"
+            app:cornerRadius="12dp" />
+
+
+        <!-- 3. IMAGE BUTTON -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="3. ImageButton"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Representa una acción mediante una imagen. Es útil cuando un ícono comunica claramente su función."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/buttonRadio"
+
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+
+            android:background="@color/garage_surface"
+
+            android:contentDescription="Enviar mensaje por radio"
+
+            android:padding="14dp"
+
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:tint="@color/accent_mclaren" />
+
+
+        <!-- 4. FLOATING ACTION BUTTON -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="4. FloatingActionButton"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Botón flotante que destaca una acción importante dentro de una pantalla."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabQuickAction"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:contentDescription="Agregar acción rápida"
+
+            app:backgroundTint="@color/team_mclaren"
+
+            app:srcCompat="@android:drawable/ic_input_add"
+            app:tint="@color/garage_header" />
+
+
+        <!-- 5. TOGGLE BUTTON -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="5. ToggleButton"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Alterna entre dos estados. Permite activar o desactivar una función y conservar visualmente su estado."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <ToggleButton
+            android:id="@+id/toggleDrs"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textOff="DRS desactivado"
+            android:textOn="DRS activado" />
+
+
+        <!-- 6. SWITCH -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="6. SwitchMaterial"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Interruptor que modifica una configuración de manera inmediata. Su posición comunica si está habilitada."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchTelemetry"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Habilitar telemetría"
+
+            android:textColor="@color/garage_text_primary" />
+
+
+        <!-- 7. BOTÓN CON CARGA -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="7. Botón con estado de carga"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Comunica que una operación está en proceso y evita que el usuario la ejecute repetidamente."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonStrategy"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Procesar estrategia"
+            android:textColor="@color/f1_white"
+
+            app:backgroundTint="@color/accent_mclaren"
+            app:cornerRadius="12dp" />
+
+        <ProgressBar
+            android:id="@+id/progressStrategy"
+
+            style="?android:attr/progressBarStyleHorizontal"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+
+        <!-- 8. BOTÓN DESHABILITADO -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="8. Botón deshabilitado"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Muestra una acción temporalmente no disponible. No responde a pulsaciones mientras permanece deshabilitado."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDisabled"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:enabled="false"
+            android:text="Acceso restringido" />
+
+
+        <!-- ESTADO GENERAL -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+
+            app:cardBackgroundColor="@color/garage_surface"
+            app:cardCornerRadius="16dp"
+
+            app:strokeColor="@color/garage_border"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/textControlStatus"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="20dp"
+
+                android:text="Centro de control listo para recibir acciones."
+
+                android:textColor="@color/garage_text_primary"
+                android:textSize="14sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

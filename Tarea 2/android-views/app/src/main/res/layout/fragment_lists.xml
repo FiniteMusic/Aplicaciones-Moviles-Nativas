@@ -1,6 +1,378 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/garage_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <!-- ================================= -->
+        <!-- ENCABEZADO WILLIAMS               -->
+        <!-- ================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="28dp"
+
+            app:cardBackgroundColor="@color/garage_header"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="WILLIAMS · SECCIÓN 04"
+
+                        android:textColor="#8DB9FF"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+
+                        android:text="Parrilla de salida"
+
+                        android:textColor="@color/f1_white"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="Explora las listas y colecciones mediante los pilotos y escuderías de Fórmula 1."
+
+                        android:textColor="#D5D8DF"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+
+                    android:background="@color/team_williams" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================= -->
+        <!-- CONTADOR DE PILOTOS               -->
+        <!-- ================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="28dp"
+
+            app:cardBackgroundColor="@color/garage_surface"
+            app:cardCornerRadius="16dp"
+
+            app:strokeColor="@color/garage_border"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/textDriverCount"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="0"
+
+                    android:textColor="@color/accent_williams"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="PILOTOS REGISTRADOS"
+
+                        android:textColor="@color/garage_text_primary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="4dp"
+
+                        android:text="Datos compartidos con Registro de pilotos."
+
+                        android:textColor="@color/garage_text_secondary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================= -->
+        <!-- 01 - LISTVIEW                     -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="1. ListView"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Muestra una colección de elementos en una lista vertical. Un adaptador transforma los datos en elementos visibles y permite responder a su selección."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <ListView
+            android:id="@+id/listViewDrivers"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/garage_surface"
+
+            android:divider="@color/garage_border"
+            android:dividerHeight="1dp"
+
+            android:nestedScrollingEnabled="false" />
+
+
+        <!-- ================================= -->
+        <!-- 02 - RECYCLERVIEW                 -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="2. RecyclerView"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Presenta colecciones mediante un adaptador y reutiliza vistas para reducir trabajo de creación. Permite personalizar cada elemento con diseños propios."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDrivers"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:nestedScrollingEnabled="false" />
+
+
+        <!-- ================================= -->
+        <!-- ESTADO VACÍO                      -->
+        <!-- ================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardEmptyDrivers"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="12dp"
+
+            app:cardBackgroundColor="@color/garage_surface"
+            app:cardCornerRadius="16dp"
+
+            app:strokeColor="@color/garage_border"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:padding="24dp"
+
+                android:text="Todavía no hay pilotos registrados. Visita la sección Registro de pilotos para agregar uno."
+
+                android:textColor="@color/garage_text_secondary"
+                android:textSize="14sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================= -->
+        <!-- 03 - GRIDVIEW                     -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="3. GridView"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Organiza elementos en filas y columnas. Es útil para presentar opciones o colecciones que pueden explorarse visualmente."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <GridView
+            android:id="@+id/gridViewTeams"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:numColumns="2"
+
+            android:horizontalSpacing="8dp"
+            android:verticalSpacing="8dp"
+
+            android:stretchMode="columnWidth"
+
+            android:background="@color/garage_surface"
+            android:padding="12dp"
+
+            android:nestedScrollingEnabled="false" />
+
+
+        <!-- ================================= -->
+        <!-- RESULTADO DE LA SELECCIÓN         -->
+        <!-- ================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="24dp"
+
+            app:cardBackgroundColor="@color/garage_surface"
+            app:cardCornerRadius="16dp"
+
+            app:strokeColor="@color/garage_border"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="ELEMENTO SELECCIONADO"
+
+                    android:textColor="@color/accent_williams"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textListSelection"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="8dp"
+
+                    android:text="Selecciona un piloto o una escudería."
+
+                    android:textColor="@color/garage_text_primary"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

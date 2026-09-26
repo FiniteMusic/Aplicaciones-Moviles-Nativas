@@ -1,6 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/garage_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- ================================= -->
+        <!-- ENCABEZADO PRINCIPAL              -->
+        <!-- ================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:cardBackgroundColor="@color/garage_header"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <!-- Contenido del encabezado -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="F1 UI GARAGE"
+                        android:textColor="@color/f1_white"
+
+                        android:textSize="29sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+
+                        android:text="Catálogo interactivo de componentes móviles inspirado en la Fórmula 1."
+
+                        android:textColor="#D5D8DF"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="20dp"
+
+                        android:text="ANDROID VIEWS + XML"
+
+                        android:textColor="@color/f1_white"
+
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- ================================= -->
+                <!-- FRANJAS DE ESCUDERÍAS             -->
+                <!-- ================================= -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+
+                    android:orientation="horizontal">
+
+                    <!-- Ferrari -->
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:background="@color/team_ferrari" />
+
+                    <!-- McLaren -->
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:background="@color/team_mclaren" />
+
+                    <!-- Mercedes -->
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:background="@color/team_mercedes" />
+
+                    <!-- Williams -->
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:background="@color/team_williams" />
+
+                    <!-- Aston Martin -->
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:background="@color/team_astonmartin" />
+
+                    <!-- Alpine -->
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:background="@color/team_alpine" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================= -->
+        <!-- TÍTULO DEL CATÁLOGO               -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="6dp"
+
+            android:text="Explora el catálogo"
+
+            android:textColor="@color/garage_text_primary"
+
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="20dp"
+
+            android:text="Selecciona una categoría para explorar sus componentes."
+
+            android:textColor="@color/garage_text_secondary"
+
+            android:textSize="14sp" />
+
+
+        <!-- ================================= -->
+        <!-- CATEGORÍAS                        -->
+        <!-- ================================= -->
+
+        <!-- 01 - Ferrari -->
+
+        <include
+            android:id="@+id/cardTextInput"
+            layout="@layout/item_home_category" />
+
+
+        <!-- 02 - McLaren -->
+
+        <include
+            android:id="@+id/cardButtons"
+            layout="@layout/item_home_category" />
+
+
+        <!-- 03 - Mercedes -->
+
+        <include
+            android:id="@+id/cardSelection"
+            layout="@layout/item_home_category" />
+
+
+        <!-- 04 - Williams -->
+
+        <include
+            android:id="@+id/cardLists"
+            layout="@layout/item_home_category" />
+
+
+        <!-- 05 - Aston Martin -->
+
+        <include
+            android:id="@+id/cardFeedback"
+            layout="@layout/item_home_category" />
+
+
+        <!-- 06 - Alpine -->
+
+        <include
+            android:id="@+id/cardLayouts"
+            layout="@layout/item_home_category" />
+
+    </LinearLayout>
+
+</ScrollView>

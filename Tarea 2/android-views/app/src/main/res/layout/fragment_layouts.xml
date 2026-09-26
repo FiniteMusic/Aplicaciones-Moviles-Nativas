@@ -1,6 +1,737 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/garage_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <!-- ================================= -->
+        <!-- ENCABEZADO ALPINE                 -->
+        <!-- ================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="28dp"
+
+            app:cardBackgroundColor="@color/garage_header"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="ALPINE · SECCIÓN 06"
+
+                        android:textColor="#A8B8FF"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+
+                        android:text="Laboratorio de layouts"
+
+                        android:textColor="@color/f1_white"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="Explora cómo Android organiza, posiciona y distribuye los componentes de una interfaz."
+
+                        android:textColor="#D5D8DF"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+
+                    android:background="@color/team_alpine" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================= -->
+        <!-- 01 - LINEARLAYOUT                 -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="1. LinearLayout"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Organiza elementos consecutivamente en una dirección vertical u horizontal. La propiedad orientation determina cómo se distribuyen sus hijos."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:cardBackgroundColor="@color/garage_surface"
+            app:cardCornerRadius="16dp"
+
+            app:strokeColor="@color/garage_border"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:id="@+id/linearDemo"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+
+                    android:gravity="center"
+
+                    android:background="@color/team_ferrari"
+
+                    android:text="SECTOR 1"
+                    android:textColor="@color/f1_white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+
+                    android:layout_marginTop="8dp"
+
+                    android:gravity="center"
+
+                    android:background="@color/team_mclaren"
+
+                    android:text="SECTOR 2"
+                    android:textColor="@color/garage_header"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+
+                    android:layout_marginTop="8dp"
+
+                    android:gravity="center"
+
+                    android:background="@color/team_mercedes"
+
+                    android:text="SECTOR 3"
+                    android:textColor="@color/garage_header"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonChangeOrientation"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="12dp"
+
+            android:text="Cambiar a horizontal"
+            android:textColor="@color/f1_white"
+
+            app:backgroundTint="@color/accent_alpine"
+            app:cornerRadius="12dp" />
+
+
+        <!-- ================================= -->
+        <!-- 02 - CONSTRAINTLAYOUT             -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="2. ConstraintLayout"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Posiciona elementos mediante restricciones respecto al contenedor o a otras vistas. Facilita construir interfaces flexibles sin anidar muchos layouts."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:cardBackgroundColor="@color/garage_surface"
+            app:cardCornerRadius="16dp"
+
+            app:strokeColor="@color/garage_border"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/textConstraintTitle"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="MONOPLAZA A526"
+
+                    android:textColor="@color/garage_text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/textConstraintNumber"
+
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+
+                    android:gravity="center"
+
+                    android:background="@color/team_alpine"
+
+                    android:text="06"
+                    android:textColor="@color/f1_white"
+
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintTop_toBottomOf="@id/textConstraintTitle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textConstraintDescription"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+
+                    android:text="Diseño adaptable mediante restricciones entre componentes."
+
+                    android:textColor="@color/garage_text_secondary"
+                    android:textSize="14sp"
+
+                    app:layout_constraintStart_toEndOf="@id/textConstraintNumber"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintTop_toTopOf="@id/textConstraintNumber"
+                    app:layout_constraintBottom_toBottomOf="@id/textConstraintNumber" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================= -->
+        <!-- 03 - FRAMELAYOUT                  -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="3. FrameLayout"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Permite colocar vistas una encima de otra. Es útil para superponer indicadores, etiquetas o contenido sobre un elemento principal."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+
+            android:background="@color/garage_header">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+
+                android:text="ALPINE\nRACE CONTROL"
+
+                android:textColor="@color/f1_white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textFrameBadge"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="top|end"
+                android:layout_margin="12dp"
+
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+
+                android:background="@color/team_mercedes"
+
+                android:text="EN VIVO"
+                android:textColor="@color/garage_header"
+
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonToggleBadge"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="12dp"
+
+            android:text="Ocultar indicador"
+            android:textColor="@color/f1_white"
+
+            app:backgroundTint="@color/accent_alpine"
+            app:cornerRadius="12dp" />
+
+
+        <!-- ================================= -->
+        <!-- 04 - GRIDLAYOUT                   -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="4. GridLayout"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Organiza vistas mediante filas y columnas. A diferencia de GridView, sus elementos pueden definirse directamente dentro del XML."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:columnCount="2"
+            android:rowCount="2"
+
+            android:background="@color/garage_surface"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+
+                android:gravity="center"
+
+                android:background="@color/team_ferrari"
+
+                android:text="P1"
+                android:textColor="@color/f1_white"
+
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+
+                android:gravity="center"
+
+                android:background="@color/team_mclaren"
+
+                android:text="P2"
+                android:textColor="@color/garage_header"
+
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+
+                android:gravity="center"
+
+                android:background="@color/team_mercedes"
+
+                android:text="P3"
+                android:textColor="@color/garage_header"
+
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+
+                android:gravity="center"
+
+                android:background="@color/team_williams"
+
+                android:text="P4"
+                android:textColor="@color/f1_white"
+
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </GridLayout>
+
+
+        <!-- ================================= -->
+        <!-- 05 - SCROLLVIEW                   -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="5. ScrollView"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Permite desplazarse verticalmente cuando el contenido supera la altura disponible. Toda esta pantalla utiliza un ScrollView como contenedor principal."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:cardBackgroundColor="@color/garage_surface"
+            app:cardCornerRadius="16dp"
+
+            app:strokeColor="@color/garage_border"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="20dp"
+
+                android:text="Desliza hacia abajo para continuar explorando los componentes de esta pantalla."
+
+                android:textColor="@color/garage_text_primary"
+                android:textSize="14sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================= -->
+        <!-- 06 - HORIZONTALSCROLLVIEW         -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="6. HorizontalScrollView"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Permite recorrer horizontalmente contenido que supera el ancho de la pantalla. Es útil para mostrar tarjetas o categorías consecutivas."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fillViewport="false"
+            android:scrollbars="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
+
+                    android:layout_marginEnd="12dp"
+
+                    android:gravity="center"
+
+                    android:background="@color/team_ferrari"
+
+                    android:text="FERRARI"
+                    android:textColor="@color/f1_white"
+
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
+
+                    android:layout_marginEnd="12dp"
+
+                    android:gravity="center"
+
+                    android:background="@color/team_mclaren"
+
+                    android:text="MCLAREN"
+                    android:textColor="@color/garage_header"
+
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
+
+                    android:layout_marginEnd="12dp"
+
+                    android:gravity="center"
+
+                    android:background="@color/team_mercedes"
+
+                    android:text="MERCEDES"
+                    android:textColor="@color/garage_header"
+
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
+
+                    android:layout_marginEnd="12dp"
+
+                    android:gravity="center"
+
+                    android:background="@color/team_williams"
+
+                    android:text="WILLIAMS"
+                    android:textColor="@color/f1_white"
+
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
+
+                    android:layout_marginEnd="12dp"
+
+                    android:gravity="center"
+
+                    android:background="@color/team_astonmartin"
+
+                    android:text="ASTON MARTIN"
+                    android:textColor="@color/f1_white"
+
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
+
+                    android:gravity="center"
+
+                    android:background="@color/team_alpine"
+
+                    android:text="ALPINE"
+                    android:textColor="@color/f1_white"
+
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+        <!-- ================================= -->
+        <!-- ESTADO DEL LABORATORIO            -->
+        <!-- ================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+
+            app:cardBackgroundColor="@color/garage_surface"
+            app:cardCornerRadius="16dp"
+
+            app:strokeColor="@color/garage_border"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="ESTADO DEL LABORATORIO"
+
+                    android:textColor="@color/accent_alpine"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textLayoutStatus"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="8dp"
+
+                    android:text="Explora los contenedores y modifica su distribución."
+
+                    android:textColor="@color/garage_text_primary"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

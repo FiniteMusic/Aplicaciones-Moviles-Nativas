@@ -1,6 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:id="@+id/nav_graph.xml">
+
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/nav_graph"
+
+    app:startDestination="@id/homeFragment">
+
+    <!-- Pantalla principal -->
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.marcudlcv.f1uigarageviews.fragments.HomeFragment"
+        android:label="F1 UI Garage">
+
+        <action
+            android:id="@+id/action_home_to_textInput"
+            app:destination="@id/textInputFragment" />
+
+        <action
+            android:id="@+id/action_home_to_buttons"
+            app:destination="@id/buttonsFragment" />
+
+        <action
+            android:id="@+id/action_home_to_selection"
+            app:destination="@id/selectionFragment" />
+
+        <action
+            android:id="@+id/action_home_to_lists"
+            app:destination="@id/listsFragment" />
+
+        <action
+            android:id="@+id/action_home_to_feedback"
+            app:destination="@id/feedbackFragment" />
+
+        <action
+            android:id="@+id/action_home_to_layouts"
+            app:destination="@id/layoutsFragment" />
+
+    </fragment>
+
+    <!-- Sección 1 -->
+
+    <fragment
+        android:id="@+id/textInputFragment"
+        android:name="com.marcudlcv.f1uigarageviews.fragments.TextInputFragment"
+        android:label="Entrada de texto" />
+
+    <!-- Sección 2 -->
+
+    <fragment
+        android:id="@+id/buttonsFragment"
+        android:name="com.marcudlcv.f1uigarageviews.fragments.ButtonsFragment"
+        android:label="Botones y acciones" />
+
+    <!-- Sección 3 -->
+
+    <fragment
+        android:id="@+id/selectionFragment"
+        android:name="com.marcudlcv.f1uigarageviews.fragments.SelectionFragment"
+        android:label="Elementos de selección" />
+
+    <!-- Sección 4 -->
+
+    <fragment
+        android:id="@+id/listsFragment"
+        android:name="com.marcudlcv.f1uigarageviews.fragments.ListsFragment"
+        android:label="Listas y colecciones" />
+
+    <!-- Sección 5 -->
+
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.marcudlcv.f1uigarageviews.fragments.FeedbackFragment"
+        android:label="Información y retroalimentación" />
+
+    <!-- Sección 6 -->
+
+    <fragment
+        android:id="@+id/layoutsFragment"
+        android:name="com.marcudlcv.f1uigarageviews.fragments.LayoutsFragment"
+        android:label="Contenedores y estructura" />
 
 </navigation>

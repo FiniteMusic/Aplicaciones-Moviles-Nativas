@@ -1,6 +1,561 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/garage_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <!-- ================================= -->
+        <!-- ENCABEZADO FERRARI                -->
+        <!-- ================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="28dp"
+
+            app:cardBackgroundColor="@color/garage_header"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="FERRARI · SECCIÓN 01"
+
+                        android:textColor="#FF8791"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+
+                        android:text="Registro de pilotos"
+
+                        android:textColor="@color/f1_white"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="Explora los componentes de entrada de texto mediante el registro de un piloto."
+
+                        android:textColor="#D5D8DF"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <!-- Franja Ferrari -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+
+                    android:background="@color/team_ferrari" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================= -->
+        <!-- 01 - CAMPO DE TEXTO SIMPLE        -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="1. Campo de texto simple"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Permite capturar información alfanumérica. Se utiliza para introducir datos como nombres, identificadores o descripciones."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutDriverName"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Nombre del piloto"
+
+            app:boxBackgroundColor="@color/garage_surface"
+            app:boxStrokeColor="@color/text_input_stroke">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputDriverName"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:inputType="textPersonName"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- ================================= -->
+        <!-- 02 - CAMPO CON VALIDACIÓN         -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="2. Campo con validación"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Verifica que la información cumpla determinadas condiciones. Cuando el dato es incorrecto, muestra un mensaje de error."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutDriverNumber"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Número del piloto"
+
+            app:helperText="Introduce un número entre 1 y 99"
+
+            app:boxBackgroundColor="@color/garage_surface"
+            app:boxStrokeColor="@color/text_input_stroke">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputDriverNumber"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:inputType="number"
+                android:maxLength="2" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonValidate"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="12dp"
+
+            android:text="Validar número"
+            android:textColor="@color/f1_white"
+
+            app:backgroundTint="@color/accent_ferrari"
+            app:cornerRadius="12dp" />
+
+
+        <!-- ================================= -->
+        <!-- 03 - CAMPO DE CONTRASEÑA          -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="3. Campo de contraseña"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Oculta información sensible durante su captura. El usuario puede alternar entre mostrar y ocultar el contenido."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutPassword"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Código de acceso al garaje"
+
+            app:boxBackgroundColor="@color/garage_surface"
+            app:boxStrokeColor="@color/text_input_stroke"
+
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputPassword"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- ================================= -->
+        <!-- 04 - TECLADO DE CORREO            -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="4. Teclado de correo electrónico"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Adapta el teclado virtual para facilitar la captura de direcciones de correo electrónico."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Correo del equipo"
+
+            app:boxBackgroundColor="@color/garage_surface"
+            app:boxStrokeColor="@color/text_input_stroke">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputEmail"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- ================================= -->
+        <!-- 05 - TECLADO TELEFÓNICO           -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="5. Teclado telefónico"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Presenta un teclado especializado para introducir números telefónicos y caracteres asociados."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Teléfono de contacto"
+
+            app:boxBackgroundColor="@color/garage_surface"
+            app:boxStrokeColor="@color/text_input_stroke">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputPhone"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:inputType="phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- ================================= -->
+        <!-- 06 - CAMPO MULTILÍNEA             -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="6. Campo multilínea"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Permite capturar textos extensos distribuidos en varias líneas, como comentarios y observaciones."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Observaciones del piloto"
+
+            app:boxBackgroundColor="@color/garage_surface"
+            app:boxStrokeColor="@color/text_input_stroke">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputObservations"
+
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+
+                android:gravity="top"
+
+                android:inputType="textMultiLine"
+                android:minLines="3" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- ================================= -->
+        <!-- 07 - CAMPO CON SUGERENCIAS        -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="7. Campo con sugerencias"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Presenta opciones relacionadas con el texto introducido y facilita la selección de valores previamente definidos."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTeam"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Escudería"
+
+            app:boxBackgroundColor="@color/garage_surface"
+            app:boxStrokeColor="@color/text_input_stroke">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/inputTeam"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- ================================= -->
+        <!-- 08 - BARRA DE BÚSQUEDA            -->
+        <!-- ================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:text="8. Barra de búsqueda"
+
+            android:textColor="@color/garage_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            android:text="Permite localizar información mediante palabras clave. Los resultados se actualizan según el texto introducido."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Buscar piloto"
+
+            app:boxBackgroundColor="@color/garage_surface"
+            app:boxStrokeColor="@color/text_input_stroke"
+
+            app:startIconDrawable="@android:drawable/ic_menu_search">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputSearch"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textSearchResult"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+
+            android:text="Escribe para buscar un piloto."
+
+            android:textColor="@color/garage_text_secondary"
+            android:textSize="14sp" />
+
+
+        <!-- ================================= -->
+        <!-- REGISTRO DEL PILOTO               -->
+        <!-- ================================= -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonRegisterDriver"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+
+            android:text="Registrar piloto"
+            android:textColor="@color/f1_white"
+
+            app:backgroundTint="@color/accent_ferrari"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+
+</ScrollView>

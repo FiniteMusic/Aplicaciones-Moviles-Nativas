@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores base -->
+
+    <color name="garage_background">#F6F7F9</color>
+    <color name="garage_surface">#FFFFFF</color>
+    <color name="garage_header">#20232B</color>
+
+    <color name="garage_text_primary">#20232B</color>
+    <color name="garage_text_secondary">#626875</color>
+    <color name="garage_border">#E4E7EC</color>
+
+    <!-- Escuderías -->
+
+    <color name="team_ferrari">#E21B2E</color>
+    <color name="team_mclaren">#FF8000</color>
+    <color name="team_mercedes">#00C8B3</color>
+    <color name="team_williams">#2563EB</color>
+    <color name="team_astonmartin">#00665E</color>
+    <color name="team_alpine">#2454F4</color>
+
+    <color name="team_redbull">#172554</color>
+    <color name="team_racingbulls">#2446C6</color>
+    <color name="team_haas">#C8102E</color>
+    <color name="team_audi">#303034</color>
+    <color name="team_cadillac">#9097A3</color>
+
+    <!-- Acentos para botones y texto -->
+
+    <color name="accent_ferrari">#C41629</color>
+    <color name="accent_mclaren">#B85C00</color>
+    <color name="accent_mercedes">#007D72</color>
+    <color name="accent_williams">#1D4ED8</color>
+    <color name="accent_astonmartin">#00665E</color>
+    <color name="accent_alpine">#2146C7</color>
+
+    <!-- Compatibilidad con el diseño anterior -->
+
+    <color name="f1_red">#E21B2E</color>
+    <color name="f1_red_dark">#B51525</color>
+    <color name="f1_black">#15151E</color>
+    <color name="f1_gray">#38383F</color>
+    <color name="f1_white">#FFFFFF</color>
+
 </resources>

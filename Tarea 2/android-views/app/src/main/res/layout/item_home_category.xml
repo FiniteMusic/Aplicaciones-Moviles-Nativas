@@ -1,6 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginBottom="12dp"
+
+    android:clickable="true"
+    android:focusable="true"
+
+    app:cardBackgroundColor="@color/garage_surface"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+
+    app:strokeColor="@color/garage_border"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Franja de color -->
+
+        <View
+            android:id="@+id/categoryAccent"
+
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+
+            android:background="@color/team_ferrari"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Nombre de la escudería -->
+
+        <TextView
+            android:id="@+id/categoryTeam"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+
+            android:text="FERRARI"
+            android:textColor="@color/team_ferrari"
+
+            android:textSize="11sp"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toEndOf="@id/categoryAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Título de la categoría -->
+
+        <TextView
+            android:id="@+id/categoryTitle"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="6dp"
+
+            android:text="Registro de pilotos"
+            android:textColor="@color/garage_text_primary"
+
+            android:textSize="19sp"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="@id/categoryTeam"
+            app:layout_constraintEnd_toEndOf="@id/categoryTeam"
+            app:layout_constraintTop_toBottomOf="@id/categoryTeam" />
+
+        <!-- Descripción -->
+
+        <TextView
+            android:id="@+id/categoryDescription"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="18dp"
+
+            android:text="Entrada de texto"
+            android:textColor="@color/garage_text_secondary"
+
+            android:textSize="14sp"
+
+            app:layout_constraintStart_toStartOf="@id/categoryTeam"
+            app:layout_constraintEnd_toEndOf="@id/categoryTeam"
+            app:layout_constraintTop_toBottomOf="@id/categoryTitle"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
