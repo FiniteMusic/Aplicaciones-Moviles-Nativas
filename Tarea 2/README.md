@@ -472,26 +472,101 @@ flutter test
 
 ---
 
-# APK
+## APK
 
-Los APK generados para cada implementación se encuentran en:
+El repositorio incluye los archivos APK correspondientes a las tres implementaciones para permitir su instalación y evaluación sin necesidad de compilar los proyectos.
 
-```text
-docs/apk/
-```
-
-- `f1-ui-garage-views.apk`
-- `f1-ui-garage-compose.apk`
-- `f1-ui-garage-flutter.apk`
+| Implementación | APK |
+|---|---|
+| Android Views | [`f1-ui-garage-views.apk`](docs/apk/f1-ui-garage-views.apk) |
+| Jetpack Compose | [`f1-ui-garage-compose.apk`](docs/apk/f1-ui-garage-compose.apk) |
+| Flutter | [`f1-ui-garage-flutter.apk`](docs/apk/f1-ui-garage-flutter.apk) |
 
 ---
 
-# Conclusión
+## Reflexión y comparación
 
-El desarrollo de F1 UI Garage permite observar cómo un mismo conjunto de requerimientos de interfaz puede resolverse mediante diferentes paradigmas.
+La implementación de una misma interfaz mediante Android Views, Jetpack Compose y Flutter permitió comparar no solamente la sintaxis de cada tecnología, sino también la forma en que cada una estructura la interfaz, administra el estado y responde a las interacciones del usuario.
 
-Android Views utiliza una separación tradicional entre layouts XML y lógica Kotlin, mientras que Jetpack Compose y Flutter adoptan modelos declarativos en los que la interfaz depende directamente del estado.
+### Android Views
 
-La implementación equivalente de entradas, botones, selecciones, listas, mecanismos de retroalimentación y layouts permite comparar no solamente la sintaxis de cada tecnología, sino también su forma de estructurar la interfaz y responder a los cambios de estado.
+Android Views presentó el enfoque más tradicional de los tres. La interfaz se construyó principalmente mediante archivos XML y el comportamiento se implementó desde Kotlin utilizando Activities, Fragments y referencias a los componentes visuales.
 
-El ejercicio muestra que no existe una correspondencia estricta uno a uno entre todos los componentes de los tres frameworks. En varios casos la equivalencia se encuentra en el comportamiento final y no necesariamente en la implementación interna utilizada para conseguirlo.
+Una de sus principales características es la separación explícita entre la definición visual y la lógica de programación. Esta separación permite identificar claramente los recursos, layouts y componentes utilizados, aunque también incrementa la cantidad de archivos y código necesarios para mantener sincronizada la interfaz con su estado.
+
+Componentes como `RecyclerView`, `ConstraintLayout`, `TextInputLayout` y Navigation Component ofrecen un alto grado de control sobre la interfaz Android.
+
+### Jetpack Compose
+
+Jetpack Compose cambió considerablemente la forma de construir la misma aplicación. En lugar de describir la interfaz mediante XML, los componentes se definieron directamente desde Kotlin utilizando funciones `@Composable`.
+
+El manejo declarativo del estado permitió que elementos como switches, filtros, indicadores de progreso y listas reaccionaran directamente a los cambios en sus variables asociadas.
+
+Esto redujo la necesidad de buscar y modificar componentes visuales de manera explícita. Sin embargo, también fue necesario comprender conceptos como recomposición, estado observable y el funcionamiento de los componentes propios de Material 3.
+
+### Flutter
+
+Flutter presentó un enfoque declarativo similar conceptualmente a Jetpack Compose, aunque utilizando Dart y un sistema completamente basado en widgets.
+
+La construcción de interfaces mediante `Row`, `Column`, `Stack`, `ListView` y otros widgets permitió crear la aplicación utilizando una composición jerárquica muy consistente.
+
+Para el estado local se utilizó principalmente `setState`, mientras que la comunicación entre Ferrari y Williams se implementó mediante `ValueNotifier` y `ValueListenableBuilder`.
+
+Una diferencia relevante es que Flutter no depende directamente de los componentes visuales nativos de Android. Esto también produce diferencias en algunos controles; por ejemplo, el framework base utiliza `SnackBar` como mecanismo Material de retroalimentación temporal y no proporciona directamente un equivalente nativo a `Toast`.
+
+### Comparación general
+
+| Aspecto | Android Views | Jetpack Compose | Flutter |
+|---|---|---|---|
+| Lenguaje | Kotlin | Kotlin | Dart |
+| Definición de UI | XML + Kotlin | Kotlin | Dart |
+| Paradigma | Basado en Views | Declarativo | Declarativo |
+| Estado local | Modificación de Views | Estado observable | `setState` |
+| Listas | `RecyclerView` / `ListView` | `LazyColumn` | `ListView` |
+| Layout | XML | Composables | Widgets |
+| Navegación | Navigation Component | Navigation Compose | Navigator |
+| Plataforma | Android | Android | Multiplataforma |
+| Material Design | Material Components | Material 3 | Material 3 |
+
+Android Views resultó útil para comprender la estructura tradicional de una aplicación Android y la relación entre XML y Kotlin. Jetpack Compose permitió implementar comportamientos equivalentes con un modelo declarativo y una relación más directa entre estado e interfaz. Flutter utilizó principios declarativos similares, pero mediante un ecosistema, lenguaje y árbol de widgets propios.
+
+El ejercicio también mostró que la equivalencia entre frameworks no siempre significa utilizar componentes idénticos. Un mismo requerimiento puede necesitar mecanismos diferentes dependiendo de las herramientas disponibles en cada tecnología.
+
+## Conclusión
+
+F1 UI Garage permitió implementar un mismo conjunto de requerimientos mediante tres tecnologías distintas y observar sus diferencias en un caso práctico.
+
+La comparación evidencia la transición desde un modelo tradicional basado en Views y archivos XML hacia modelos declarativos donde la interfaz se expresa como una función del estado.
+
+Más allá de las diferencias sintácticas, las tres implementaciones consiguieron cubrir los mismos grupos funcionales: entradas de texto, botones y controles, selecciones, listas, mecanismos de retroalimentación y layouts.
+
+La práctica permitió comprobar que seleccionar una tecnología de interfaz no consiste únicamente en comparar la cantidad de código necesaria. También deben considerarse el modelo de estado, la arquitectura, las herramientas disponibles, la plataforma objetivo y la forma en que el framework organiza y actualiza la interfaz.
+
+## Referencias
+
+Android Developers. (s. f.). *Navigation*. Google.  
+https://developer.android.com/guide/navigation
+
+Android Developers. (s. f.). *View*. Google.  
+https://developer.android.com/reference/android/view/View
+
+Android Developers. (s. f.). *Compose layout basics*. Google.  
+https://developer.android.com/develop/ui/compose/layouts/basics
+
+Android Developers. (s. f.). *Compose Material*. Google.  
+https://developer.android.com/jetpack/androidx/releases/compose-material
+
+Android Developers. (s. f.). *Style guidelines for Jetpack Compose APIs*. Google.  
+https://developer.android.com/develop/ui/compose/api-guidelines
+
+Dart. (s. f.). *Dart documentation*.  
+https://dart.dev/docs
+
+Dart. (s. f.). *Dart overview*.  
+https://dart.dev/overview
+
+Flutter. (s. f.). *Material component widgets*.  
+https://docs.flutter.dev/ui/widgets/material
+
+Flutter. (s. f.). *Material Design for Flutter*.  
+https://docs.flutter.dev/ui/design/material
