@@ -196,6 +196,77 @@ Incluye:
 Algunos ejemplos son interactivos. La distribución de los componentes puede alternarse entre horizontal y vertical y el indicador **EN VIVO** puede mostrarse u ocultarse.
 
 ---
+# Comparación visual
+
+Las tres implementaciones reproducen el mismo catálogo de componentes y mantienen una identidad visual común. Las siguientes capturas permiten comparar el resultado obtenido mediante Android Views, Jetpack Compose y Flutter.
+
+## Pantalla principal
+
+| Android Views | Jetpack Compose | Flutter |
+|---|---|---|
+| <img src="docs/android-views/01-home.png" width="250"> | <img src="docs/android-compose/01-home.png" width="250"> | <img src="docs/flutter/01-home.png" width="250"> |
+
+La pantalla principal presenta las seis categorías del catálogo y utiliza una tarjeta identificada con el color correspondiente a cada escudería.
+
+---
+
+## Ferrari — Entradas de texto
+
+| Android Views | Jetpack Compose | Flutter |
+|---|---|---|
+| <img src="docs/android-views/02-text-input.png" width="250"> | <img src="docs/android-compose/02-text-input.png" width="250"> | <img src="docs/flutter/02-text-input.png" width="250"> |
+
+Las tres implementaciones permiten capturar y validar información del piloto, seleccionar una escudería y registrar los datos en el repositorio compartido.
+
+---
+
+## McLaren — Botones y controles
+
+| Android Views | Jetpack Compose | Flutter |
+|---|---|---|
+| <img src="docs/android-views/03-buttons.png" width="250"> | <img src="docs/android-compose/03-buttons.png" width="250"> | <img src="docs/flutter/03-buttons.png" width="250"> |
+
+Esta sección compara diferentes controles interactivos como botones, switches, acciones flotantes y estados de carga.
+
+---
+
+## Mercedes — Selecciones
+
+| Android Views | Jetpack Compose | Flutter |
+|---|---|---|
+| <img src="docs/android-views/04-selections.png" width="250"> | <img src="docs/android-compose/04-selections.png" width="250"> | <img src="docs/flutter/04-selections.png" width="250"> |
+
+Se muestran componentes destinados a la selección única, selección múltiple y configuración de parámetros.
+
+---
+
+## Williams — Listas
+
+| Android Views | Jetpack Compose | Flutter |
+|---|---|---|
+| <img src="docs/android-views/05-lists.png" width="250"> | <img src="docs/android-compose/05-lists.png" width="250"> | <img src="docs/flutter/05-lists.png" width="250"> |
+
+Williams presenta colecciones de datos mediante listas y cuadrículas. Los pilotos registrados previamente desde Ferrari aparecen dinámicamente en esta sección.
+
+---
+
+## Aston Martin — Retroalimentación
+
+| Android Views | Jetpack Compose | Flutter |
+|---|---|---|
+| <img src="docs/android-views/06-feedback.png" width="250"> | <img src="docs/android-compose/06-feedback.png" width="250"> | <img src="docs/flutter/06-feedback.png" width="250"> |
+
+La sección utiliza diferentes mecanismos para comunicar estados, errores, confirmaciones y progreso al usuario.
+
+---
+
+## Alpine — Layouts
+
+| Android Views | Jetpack Compose | Flutter |
+|---|---|---|
+| <img src="docs/android-views/07-layouts.png" width="250"> | <img src="docs/android-compose/07-layouts.png" width="250"> | <img src="docs/flutter/07-layouts.png" width="250"> |
+
+La comparación muestra cómo cada tecnología resuelve la distribución, superposición y desplazamiento de componentes.
 
 # Equivalencia entre tecnologías
 
